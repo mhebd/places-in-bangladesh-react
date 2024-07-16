@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { District, DistrictsSelectorPropsType } from '../types';
 
 export default function DistrictSelector({
@@ -15,7 +15,7 @@ export default function DistrictSelector({
 
 	const fetchDistricts = async () => {
 		try {
-			const res = await fetch('data/districts.json', {
+			const res = await fetch('../../data/districts.json', {
 				method: 'GET',
 				headers: { 'Content-Type': 'application/json' },
 			});

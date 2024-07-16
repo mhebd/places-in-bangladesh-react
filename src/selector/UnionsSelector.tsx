@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Union, UnionsSelectorPropsType } from '../types';
 
 export default function UnionSelector({
@@ -15,7 +15,7 @@ export default function UnionSelector({
 
 	const fetchUnions = async () => {
 		try {
-			const res = await fetch('data/unions.json', {
+			const res = await fetch('../../data/unions.json', {
 				method: 'GET',
 				headers: { 'Content-Type': 'application/json' },
 			});

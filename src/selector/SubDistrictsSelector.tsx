@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { SubDistrict, SubDistrictsSelectorPropsType } from '../types';
+import React from 'react';
 
 export default function SubDistrictSelector({
 	onChangeHandler,
@@ -15,7 +16,7 @@ export default function SubDistrictSelector({
 
 	const fetchSubDistricts = async () => {
 		try {
-			const res = await fetch('data/sub-districts.json', {
+			const res = await fetch('../../data/sub-districts.json', {
 				method: 'GET',
 				headers: { 'Content-Type': 'application/json' },
 			});

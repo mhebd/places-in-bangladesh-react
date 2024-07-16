@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Division, DivisionsSelectorPropsType } from '../types';
+import React from 'react';
 
 export default function DivisionsSelector({
 	onChangeHandler,
@@ -14,7 +15,7 @@ export default function DivisionsSelector({
 
 	const fetchDivisions = async () => {
 		try {
-			const res = await fetch('data/divisions.json', {
+			const res = await fetch('../../data/divisions.json', {
 				method: 'GET',
 				headers: { 'Content-Type': 'application/json' },
 			});
